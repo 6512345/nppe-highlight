@@ -36,6 +36,10 @@
       "scopeName": "source.nppe",
       "path": "./syntaxes/nppescript.tmLanguage.json"
     }],
+    "snippets": [{
+      "language": "nppescript",
+      "path": "./snippets/snippets.json"
+    }],
     "configurationDefaults": {
       "editor.tokenColorCustomizations": {
         "[*Dark*]": {

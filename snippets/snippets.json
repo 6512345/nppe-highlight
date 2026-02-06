@@ -1,0 +1,362 @@
+{
+	"Begin Playback Engine": {
+		"prefix": "begin_playback_engine",
+		"body": "begin_playback_engine(${1:DISPLAY_NAME})",
+		"description": "Begin a playback engine definition."
+	},
+	"Set VST3 Name": {
+		"prefix": "set_vst3_name",
+		"body": "set_vst3_name(${1:VST3_PLUGIN_NAME})",
+		"description": "Set the VST3 plugin name."
+	},
+	"Set VST3 ID": {
+		"prefix": "set_vst3_id",
+		"body": "set_vst3_id(${1:VST3_ID_STRING})",
+		"description": "Set the VST3 ID string."
+	},
+	"Set Microphone Configuration": {
+		"prefix": "set_microphone_configuration",
+		"body": "set_microphone_configuration(${1:MIC1}${2:, ${3:OPTIONAL_MIC2}}${4:, ${5:OPTIONAL_MIC3}})",
+		"description": "Set the microphone configuration."
+	},
+	"Set Default Microphone Balance": {
+		"prefix": "set_default_microphone_balance",
+		"body": "set_default_microphone_balance(${1:MIC1}, ${2:MIC2}${3:, ${4:OPTIONAL_MIC3}})",
+		"description": "Set the default microphone balance."
+	},
+	"Set Recording Location": {
+		"prefix": "set_recording_location",
+		"body": "set_recording_location(${1:STUDIO_NAME})",
+		"description": "Set the recording location."
+	},
+	"Set Developer": {
+		"prefix": "set_developer",
+		"body": "set_developer(${1:DEVELOPER_NAME})",
+		"description": "Set the developer name."
+	},
+	"Set Release Year": {
+		"prefix": "set_release_year",
+		"body": "set_release_year(${1:YEAR})",
+		"description": "Set the release year."
+	},
+	"Set Website": {
+		"prefix": "set_website",
+		"body": "set_website(${1:URL})",
+		"description": "Set the website URL."
+	},
+	"Set Cover Art": {
+		"prefix": "set_cover_art",
+		"body": "set_cover_art(${1:PNG_FILENAME})",
+		"description": "Set the cover art PNG filename."
+	},
+	"Add Recommended Software Version": {
+		"prefix": "add_recommended_software_version",
+		"body": "add_recommended_software_version(${1:SOFTWARE_VERSION_STRING})",
+		"description": "Add a recommended software version."
+	},
+	"Begin Product": {
+		"prefix": "begin_product",
+		"body": "begin_product(${1:SHORT_PRODUCT_NAME})",
+		"description": "Begin a product definition."
+	},
+	"Set Long Product Name": {
+		"prefix": "set_long_product_name",
+		"body": "set_long_product_name(${1:LONG_PRODUCT_NAME})",
+		"description": "Set the long product name."
+	},
+	"Begin Instrument": {
+		"prefix": "begin_instrument",
+		"body": "begin_instrument(${1:INSTRUMENT_NAME})",
+		"description": "Begin an instrument definition."
+	},
+	"Begin Percussion Instrument": {
+		"prefix": "begin_percussion_instrument",
+		"body": "begin_percussion_instrument(${1:INSTRUMENT_NAME})",
+		"description": "Begin a percussion instrument definition."
+	},
+	"Set NotePerformer Override Sound": {
+		"prefix": "set_noteperformer_override_sound",
+		"body": "set_noteperformer_override_sound(${1:NP_OVERRIDE_SOUND})",
+		"description": "Set the NotePerformer override sound."
+	},
+	"Set VST3 Preset": {
+		"prefix": "set_vst3_preset",
+		"body": "set_vst3_preset(${1:PRESET_FILENAME})",
+		"description": "Set the VST3 preset filename."
+	},
+	"Set Layered VST3 Presets": {
+		"prefix": "set_layered_vst3_presets",
+		"body": "set_layered_vst3_presets(${1:PRESET_FILENAME1}, ${2:PRESET_FILENAME2}${3:, ...})",
+		"description": "Set layered VST3 presets."
+	},
+	"Set EQ Low Shelf": {
+		"prefix": "set_eq_low_shelf",
+		"body": "set_eq_low_shelf(${1:DB_GAIN}, ${2:FREQUENCY})",
+		"description": "Set EQ low shelf."
+	},
+	"Set EQ Peak 1": {
+		"prefix": "set_eq_peak1",
+		"body": "set_eq_peak1(${1:DB_GAIN}, ${2:FREQUENCY}, ${3:Q_VALUE})",
+		"description": "Set EQ peak 1."
+	},
+	"Set EQ Peak 2": {
+		"prefix": "set_eq_peak2",
+		"body": "set_eq_peak2(${1:DB_GAIN}, ${2:FREQUENCY}, ${3:Q_VALUE})",
+		"description": "Set EQ peak 2."
+	},
+	"Set EQ High Shelf": {
+		"prefix": "set_eq_high_shelf",
+		"body": "set_eq_high_shelf(${1:DB_GAIN}, ${2:FREQUENCY})",
+		"description": "Set EQ high shelf."
+	},
+	"Set EQ High Pass": {
+		"prefix": "set_eq_high_pass",
+		"body": "set_eq_high_pass(${1:FREQUENCY})",
+		"description": "Set EQ high pass frequency."
+	},
+	"Set EQ Saturation": {
+		"prefix": "set_eq_saturation",
+		"body": "set_eq_saturation(${1:PERCENTAGE})",
+		"description": "Set EQ saturation percentage."
+	},
+	"Set EQ Output Gain": {
+		"prefix": "set_eq_output_gain",
+		"body": "set_eq_output_gain(${1:DB_GAIN})",
+		"description": "Set EQ output gain."
+	},
+	"Set Next Articulation Force Notes": {
+		"prefix": "set_next_articulation_force_notes",
+		"body": "set_next_articulation_force_notes(${1:NOTE1}${2:, ${3:NOTE2}}${4:, ${5:NOTE3}}${6:, ...})",
+		"description": "Force notes for the next articulation."
+	},
+	"Set Next Articulation Force Velocities": {
+		"prefix": "set_next_articulation_force_velocities",
+		"body": "set_next_articulation_force_velocities(${1:VELOCITY1}${2:, ${3:VELOCITY2}}${4:, ...})",
+		"description": "Force velocities for the next articulation."
+	},
+	"Set Next Articulation Transpose": {
+		"prefix": "set_next_articulation_transpose",
+		"body": "set_next_articulation_transpose(${1:NUM_SEMITONES})",
+		"description": "Transpose the next articulation."
+	},
+	"Set Next Articulation Offset Velocity Layers dB": {
+		"prefix": "set_next_articulation_offset_velocity_layers_db",
+		"body": "set_next_articulation_offset_velocity_layers_db(${1:DB_OFFSET})",
+		"description": "Offset velocity layers for the next articulation."
+	},
+	"Set Next Articulation Limit MIDI Keyboard Range": {
+		"prefix": "set_next_articulation_limit_midi_keyboard_range",
+		"body": "set_next_articulation_limit_midi_keyboard_range(${1:LOW_NOTE}, ${2:HIGH_NOTE})",
+		"description": "Limit MIDI keyboard range for the next articulation."
+	},
+	"Set Next Articulation Limit MIDI Dynamics Range": {
+		"prefix": "set_next_articulation_limit_midi_dynamics_range",
+		"body": "set_next_articulation_limit_midi_dynamics_range(${1:LOW_VEL}, ${2:HIGH_VEL})",
+		"description": "Limit MIDI dynamics range for the next articulation."
+	},
+	"Set Default EQ Saturation": {
+		"prefix": "set_default_eq_saturation",
+		"body": "set_default_eq_saturation(${1:AMOUNT})",
+		"description": "Set default EQ saturation."
+	},
+	"Preserve Tuning": {
+		"prefix": "preserve_tuning",
+		"body": "preserve_tuning()",
+		"description": "Preserve tuning."
+	},
+	"Preserve Timing": {
+		"prefix": "preserve_timing",
+		"body": "preserve_timing()",
+		"description": "Preserve timing."
+	},
+	"Use Double Bitrate": {
+		"prefix": "use_double_bitrate",
+		"body": "use_double_bitrate()",
+		"description": "Use double bitrate."
+	},
+	"Disable Round Robins": {
+		"prefix": "disable_round_robins",
+		"body": "disable_round_robins()",
+		"description": "Disable round robins."
+	},
+	"Disable Dynamic Crossfading": {
+		"prefix": "disable_dynamic_crossfading",
+		"body": "disable_dynamic_crossfading()",
+		"description": "Disable dynamic crossfading."
+	},
+	"Default to Original Panning": {
+		"prefix": "default_to_original_panning",
+		"body": "default_to_original_panning()",
+		"description": "Default to original panning."
+	},
+	"Trills are Triggered by Two Notes": {
+		"prefix": "trills_are_triggered_by_two_notes",
+		"body": "trills_are_triggered_by_two_notes()",
+		"description": "Trills are triggered by two notes."
+	},
+	"Force Full Length Shorts": {
+		"prefix": "force_full_length_shorts",
+		"body": "force_full_length_shorts()",
+		"description": "Force full length shorts."
+	},
+	"Add Col Legno": { "prefix": "add_col_legno", "body": "add_col_legno(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add col legno articulation." },
+	"Add Cuivre": { "prefix": "add_cuivre", "body": "add_cuivre(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add cuivre articulation." },
+	"Add Flutter": { "prefix": "add_flutter", "body": "add_flutter(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add flutter articulation." },
+	"Add Legato": { "prefix": "add_legato", "body": "add_legato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add legato articulation." },
+	"Add Long Accent": { "prefix": "add_long_accent", "body": "add_long_accent(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long accent articulation." },
+	"Add Long Flutter": { "prefix": "add_long_flutter", "body": "add_long_flutter(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long flutter articulation." },
+	"Add Long Harmonics": { "prefix": "add_long_harmonics", "body": "add_long_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long harmonics articulation." },
+	"Add Long Sul Ponticello": { "prefix": "add_long_sul_ponticello", "body": "add_long_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long sul ponticello articulation." },
+	"Add Long Sul Tasto": { "prefix": "add_long_sul_tasto", "body": "add_long_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long sul tasto articulation." },
+	"Add Molto Vib": { "prefix": "add_molto_vib", "body": "add_molto_vib(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add molto vib articulation." },
+	"Add Non Vib": { "prefix": "add_non_vib", "body": "add_non_vib(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add non vib articulation." },
+	"Add Pizzicato": { "prefix": "add_pizzicato", "body": "add_pizzicato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add pizzicato articulation." },
+	"Add Portamento": { "prefix": "add_portamento", "body": "add_portamento(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add portamento articulation." },
+	"Add Short Harmonics": { "prefix": "add_short_harmonics", "body": "add_short_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add short harmonics articulation." },
+	"Add Short Sul Ponticello": { "prefix": "add_short_sul_ponticello", "body": "add_short_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add short sul ponticello articulation." },
+	"Add Short Sul Tasto": { "prefix": "add_short_sul_tasto", "body": "add_short_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add short sul tasto articulation." },
+	"Add Snap Pizzicato": { "prefix": "add_snap_pizzicato", "body": "add_snap_pizzicato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add snap pizzicato articulation." },
+	"Add Staccatissimo": { "prefix": "add_staccatissimo", "body": "add_staccatissimo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add staccatissimo articulation." },
+	"Add Staccato": { "prefix": "add_staccato", "body": "add_staccato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add staccato articulation." },
+	"Add Sustain": { "prefix": "add_sustain", "body": "add_sustain(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add sustain articulation." },
+	"Add Tremolo": { "prefix": "add_tremolo", "body": "add_tremolo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add tremolo articulation." },
+	"Add Tremolo Harmonics": { "prefix": "add_tremolo_harmonics", "body": "add_tremolo_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add tremolo harmonics articulation." },
+	"Add Tremolo Sul Ponticello": { "prefix": "add_tremolo_sul_ponticello", "body": "add_tremolo_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add tremolo sul ponticello articulation." },
+	"Add Tremolo Sul Tasto": { "prefix": "add_tremolo_sul_tasto", "body": "add_tremolo_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add tremolo sul tasto articulation." },
+	"Add Trill Half": { "prefix": "add_trill_half", "body": "add_trill_half(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add trill half articulation." },
+	"Add Trill Whole": { "prefix": "add_trill_whole", "body": "add_trill_whole(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add trill whole articulation." },
+	"Add Section Col Legno": { "prefix": "add_section_col_legno", "body": "add_section_col_legno(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section col legno articulation." },
+	"Add Section Cuivre": { "prefix": "add_section_cuivre", "body": "add_section_cuivre(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section cuivre articulation." },
+	"Add Section Flutter": { "prefix": "add_section_flutter", "body": "add_section_flutter(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section flutter articulation." },
+	"Add Section Legato": { "prefix": "add_section_legato", "body": "add_section_legato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section legato articulation." },
+	"Add Section Long Accent": { "prefix": "add_section_long_accent", "body": "add_section_long_accent(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section long accent articulation." },
+	"Add Section Long Flutter": { "prefix": "add_section_long_flutter", "body": "add_section_long_flutter(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section long flutter articulation." },
+	"Add Section Long Harmonics": { "prefix": "add_section_long_harmonics", "body": "add_section_long_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section long harmonics articulation." },
+	"Add Section Long Sul Ponticello": { "prefix": "add_section_long_sul_ponticello", "body": "add_section_long_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section long sul ponticello articulation." },
+	"Add Section Long Sul Tasto": { "prefix": "add_section_long_sul_tasto", "body": "add_section_long_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section long sul tasto articulation." },
+	"Add Section Molto Vib": { "prefix": "add_section_molto_vib", "body": "add_section_molto_vib(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section molto vib articulation." },
+	"Add Section Non Vib": { "prefix": "add_section_non_vib", "body": "add_section_non_vib(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section non vib articulation." },
+	"Add Section Pizzicato": { "prefix": "add_section_pizzicato", "body": "add_section_pizzicato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section pizzicato articulation." },
+	"Add Section Portamento": { "prefix": "add_section_portamento", "body": "add_section_portamento(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section portamento articulation." },
+	"Add Section Short Harmonics": { "prefix": "add_section_short_harmonics", "body": "add_section_short_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section short harmonics articulation." },
+	"Add Section Short Sul Ponticello": { "prefix": "add_section_short_sul_ponticello", "body": "add_section_short_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section short sul ponticello articulation." },
+	"Add Section Short Sul Tasto": { "prefix": "add_section_short_sul_tasto", "body": "add_section_short_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section short sul tasto articulation." },
+	"Add Section Snap Pizzicato": { "prefix": "add_section_snap_pizzicato", "body": "add_section_snap_pizzicato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section snap pizzicato articulation." },
+	"Add Section Staccatissimo": { "prefix": "add_section_staccatissimo", "body": "add_section_staccatissimo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section staccatissimo articulation." },
+	"Add Section Staccato": { "prefix": "add_section_staccato", "body": "add_section_staccato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section staccato articulation." },
+	"Add Section Sustain": { "prefix": "add_section_sustain", "body": "add_section_sustain(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section sustain articulation." },
+	"Add Section Tremolo": { "prefix": "add_section_tremolo", "body": "add_section_tremolo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section tremolo articulation." },
+	"Add Section Tremolo Harmonics": { "prefix": "add_section_tremolo_harmonics", "body": "add_section_tremolo_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section tremolo harmonics articulation." },
+	"Add Section Tremolo Sul Ponticello": { "prefix": "add_section_tremolo_sul_ponticello", "body": "add_section_tremolo_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section tremolo sul ponticello articulation." },
+	"Add Section Tremolo Sul Tasto": { "prefix": "add_section_tremolo_sul_tasto", "body": "add_section_tremolo_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section tremolo sul tasto articulation." },
+	"Add Section Trill Half": { "prefix": "add_section_trill_half", "body": "add_section_trill_half(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section trill half articulation." },
+	"Add Section Trill Whole": { "prefix": "add_section_trill_whole", "body": "add_section_trill_whole(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section trill whole articulation." },
+	"Add Agogo High": { "prefix": "add_agogo_high", "body": "add_agogo_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add agogo high articulation." },
+	"Add Agogo Medium": { "prefix": "add_agogo_medium", "body": "add_agogo_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add agogo medium articulation." },
+	"Add Anvil": { "prefix": "add_anvil", "body": "add_anvil(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add anvil articulation." },
+	"Add Bar Chimes": { "prefix": "add_bar_chimes", "body": "add_bar_chimes(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bar chimes articulation." },
+	"Add Bass Drum": { "prefix": "add_bass_drum", "body": "add_bass_drum(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bass drum articulation." },
+	"Add Bell Tree": { "prefix": "add_bell_tree", "body": "add_bell_tree(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bell tree articulation." },
+	"Add Cabasa": { "prefix": "add_cabasa", "body": "add_cabasa(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add cabasa articulation." },
+	"Add Castanets": { "prefix": "add_castanets", "body": "add_castanets(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add castanets articulation." },
+	"Add China Cymbal": { "prefix": "add_china_cymbal", "body": "add_china_cymbal(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add china cymbal articulation." },
+	"Add Clash High": { "prefix": "add_clash_high", "body": "add_clash_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add clash high articulation." },
+	"Add Clash Medium": { "prefix": "add_clash_medium", "body": "add_clash_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add clash medium articulation." },
+	"Add Claves": { "prefix": "add_claves", "body": "add_claves(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add claves articulation." },
+	"Add Cowbell High Muted": { "prefix": "add_cowbell_high_muted", "body": "add_cowbell_high_muted(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add cowbell high muted articulation." },
+	"Add Cowbell High Open": { "prefix": "add_cowbell_high_open", "body": "add_cowbell_high_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add cowbell high open articulation." },
+	"Add Cowbell Medium Muted": { "prefix": "add_cowbell_medium_muted", "body": "add_cowbell_medium_muted(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add cowbell medium muted articulation." },
+	"Add Cowbell Medium Open": { "prefix": "add_cowbell_medium_open", "body": "add_cowbell_medium_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add cowbell medium open articulation." },
+	"Add Egg Shaker": { "prefix": "add_egg_shaker", "body": "add_egg_shaker(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add egg shaker articulation." },
+	"Add Finger Cymbals Closed": { "prefix": "add_finger_cymbals_closed", "body": "add_finger_cymbals_closed(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add finger cymbals closed articulation." },
+	"Add Finger Cymbals Open": { "prefix": "add_finger_cymbals_open", "body": "add_finger_cymbals_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add finger cymbals open articulation." },
+	"Add Gong": { "prefix": "add_gong", "body": "add_gong(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add gong articulation." },
+	"Add Guiro Long": { "prefix": "add_guiro_long", "body": "add_guiro_long(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add guiro long articulation." },
+	"Add Guiro Short": { "prefix": "add_guiro_short", "body": "add_guiro_short(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add guiro short articulation." },
+	"Add Hand Clap": { "prefix": "add_hand_clap", "body": "add_hand_clap(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add hand clap articulation." },
+	"Add High Bongo Bass Tone": { "prefix": "add_high_bongo_bass_tone", "body": "add_high_bongo_bass_tone(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high bongo bass tone articulation." },
+	"Add High Bongo Finger Open": { "prefix": "add_high_bongo_finger_open", "body": "add_high_bongo_finger_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high bongo finger open articulation." },
+	"Add High Bongo Muffled": { "prefix": "add_high_bongo_muffled", "body": "add_high_bongo_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high bongo muffled articulation." },
+	"Add High Bongo Open": { "prefix": "add_high_bongo_open", "body": "add_high_bongo_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high bongo open articulation." },
+	"Add High Bongo Slap": { "prefix": "add_high_bongo_slap", "body": "add_high_bongo_slap(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high bongo slap articulation." },
+	"Add High Bongo Slap Muffled": { "prefix": "add_high_bongo_slap_muffled", "body": "add_high_bongo_slap_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high bongo slap muffled articulation." },
+	"Add High Conga Bass Tone": { "prefix": "add_high_conga_bass_tone", "body": "add_high_conga_bass_tone(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga bass tone articulation." },
+	"Add High Conga Finger Muffled": { "prefix": "add_high_conga_finger_muffled", "body": "add_high_conga_finger_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga finger muffled articulation." },
+	"Add High Conga Finger Open": { "prefix": "add_high_conga_finger_open", "body": "add_high_conga_finger_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga finger open articulation." },
+	"Add High Conga Harmonics": { "prefix": "add_high_conga_harmonics", "body": "add_high_conga_harmonics(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga harmonics articulation." },
+	"Add High Conga Muffled": { "prefix": "add_high_conga_muffled", "body": "add_high_conga_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga muffled articulation." },
+	"Add High Conga Mute": { "prefix": "add_high_conga_mute", "body": "add_high_conga_mute(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga mute articulation." },
+	"Add High Conga Open": { "prefix": "add_high_conga_open", "body": "add_high_conga_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga open articulation." },
+	"Add High Conga Slap": { "prefix": "add_high_conga_slap", "body": "add_high_conga_slap(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga slap articulation." },
+	"Add High Conga Slap Muffled": { "prefix": "add_high_conga_slap_muffled", "body": "add_high_conga_slap_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga slap muffled articulation." },
+	"Add High Conga Slap Mute": { "prefix": "add_high_conga_slap_mute", "body": "add_high_conga_slap_mute(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add high conga slap mute articulation." },
+	"Add Hihat Closed": { "prefix": "add_hihat_closed", "body": "add_hihat_closed(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add hihat closed articulation." },
+	"Add Hihat Open": { "prefix": "add_hihat_open", "body": "add_hihat_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add hihat open articulation." },
+	"Add Hihat Pedal": { "prefix": "add_hihat_pedal", "body": "add_hihat_pedal(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add hihat pedal articulation." },
+	"Add Low Bongo Bass Tone": { "prefix": "add_low_bongo_bass_tone", "body": "add_low_bongo_bass_tone(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low bongo bass tone articulation." },
+	"Add Low Bongo Finger Open": { "prefix": "add_low_bongo_finger_open", "body": "add_low_bongo_finger_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low bongo finger open articulation." },
+	"Add Low Bongo Muffled": { "prefix": "add_low_bongo_muffled", "body": "add_low_bongo_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low bongo muffled articulation." },
+	"Add Low Bongo Open": { "prefix": "add_low_bongo_open", "body": "add_low_bongo_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low bongo open articulation." },
+	"Add Low Bongo Slap": { "prefix": "add_low_bongo_slap", "body": "add_low_bongo_slap(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low bongo slap articulation." },
+	"Add Low Bongo Slap Muffled": { "prefix": "add_low_bongo_slap_muffled", "body": "add_low_bongo_slap_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low bongo slap muffled articulation." },
+	"Add Low Conga Bass Tone": { "prefix": "add_low_conga_bass_tone", "body": "add_low_conga_bass_tone(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga bass tone articulation." },
+	"Add Low Conga Finger Muffled": { "prefix": "add_low_conga_finger_muffled", "body": "add_low_conga_finger_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga finger muffled articulation." },
+	"Add Low Conga Finger Open": { "prefix": "add_low_conga_finger_open", "body": "add_low_conga_finger_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga finger open articulation." },
+	"Add Low Conga Harmonics": { "prefix": "add_low_conga_harmonics", "body": "add_low_conga_harmonics(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga harmonics articulation." },
+	"Add Low Conga Muffled": { "prefix": "add_low_conga_muffled", "body": "add_low_conga_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga muffled articulation." },
+	"Add Low Conga Mute": { "prefix": "add_low_conga_mute", "body": "add_low_conga_mute(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga mute articulation." },
+	"Add Low Conga Open": { "prefix": "add_low_conga_open", "body": "add_low_conga_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga open articulation." },
+	"Add Low Conga Slap": { "prefix": "add_low_conga_slap", "body": "add_low_conga_slap(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga slap articulation." },
+	"Add Low Conga Slap Muffled": { "prefix": "add_low_conga_slap_muffled", "body": "add_low_conga_slap_muffled(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga slap muffled articulation." },
+	"Add Low Conga Slap Mute": { "prefix": "add_low_conga_slap_mute", "body": "add_low_conga_slap_mute(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add low conga slap mute articulation." },
+	"Add Maracas Left": { "prefix": "add_maracas_left", "body": "add_maracas_left(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add maracas left articulation." },
+	"Add Maracas Right": { "prefix": "add_maracas_right", "body": "add_maracas_right(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add maracas right articulation." },
+	"Add Opera Gong Down": { "prefix": "add_opera_gong_down", "body": "add_opera_gong_down(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add opera gong down articulation." },
+	"Add Opera Gong Up": { "prefix": "add_opera_gong_up", "body": "add_opera_gong_up(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add opera gong up articulation." },
+	"Add Rain Stick": { "prefix": "add_rain_stick", "body": "add_rain_stick(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add rain stick articulation." },
+	"Add Ratchet": { "prefix": "add_ratchet", "body": "add_ratchet(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add ratchet articulation." },
+	"Add Ride Bell": { "prefix": "add_ride_bell", "body": "add_ride_bell(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add ride bell articulation." },
+	"Add Ride High": { "prefix": "add_ride_high", "body": "add_ride_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add ride high articulation." },
+	"Add Ride Medium": { "prefix": "add_ride_medium", "body": "add_ride_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add ride medium articulation." },
+	"Add Sleigh Bells": { "prefix": "add_sleigh_bells", "body": "add_sleigh_bells(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add sleigh bells articulation." },
+	"Add Snare": { "prefix": "add_snare", "body": "add_snare(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare articulation." },
+	"Add Snare Cross Stick": { "prefix": "add_snare_cross_stick", "body": "add_snare_cross_stick(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare cross stick articulation." },
+	"Add Snare Rim Shot": { "prefix": "add_snare_rim_shot", "body": "add_snare_rim_shot(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare rim shot articulation." },
+	"Add Snare Side Stick": { "prefix": "add_snare_side_stick", "body": "add_snare_side_stick(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare side stick articulation." },
+	"Add Snares Off": { "prefix": "add_snares_off", "body": "add_snares_off(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snares off articulation." },
+	"Add Snares Off Rim Shot": { "prefix": "add_snares_off_rim_shot", "body": "add_snares_off_rim_shot(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snares off rim shot articulation." },
+	"Add Snares Off Side Stick": { "prefix": "add_snares_off_side_stick", "body": "add_snares_off_side_stick(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snares off side stick articulation." },
+	"Add Splash Cymbal": { "prefix": "add_splash_cymbal", "body": "add_splash_cymbal(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add splash cymbal articulation." },
+	"Add Sticks": { "prefix": "add_sticks", "body": "add_sticks(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add sticks articulation." },
+	"Add Suspended Cymbal": { "prefix": "add_suspended_cymbal", "body": "add_suspended_cymbal(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add suspended cymbal articulation." },
+	"Add Taiko Low": { "prefix": "add_taiko_low", "body": "add_taiko_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add taiko low articulation." },
+	"Add Taiko Medium": { "prefix": "add_taiko_medium", "body": "add_taiko_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add taiko medium articulation." },
+	"Add Taiko Very Low": { "prefix": "add_taiko_very_low", "body": "add_taiko_very_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add taiko very low articulation." },
+	"Add Tam Tam Medium": { "prefix": "add_tam_tam_medium", "body": "add_tam_tam_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tam tam medium articulation." },
+	"Add Tambourine": { "prefix": "add_tambourine", "body": "add_tambourine(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tambourine articulation." },
+	"Add Temple Block High": { "prefix": "add_temple_block_high", "body": "add_temple_block_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add temple block high articulation." },
+	"Add Temple Block Low": { "prefix": "add_temple_block_low", "body": "add_temple_block_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add temple block low articulation." },
+	"Add Temple Block Medium": { "prefix": "add_temple_block_medium", "body": "add_temple_block_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add temple block medium articulation." },
+	"Add Temple Block Medium High": { "prefix": "add_temple_block_medium_high", "body": "add_temple_block_medium_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add temple block medium high articulation." },
+	"Add Temple Block Medium Low": { "prefix": "add_temple_block_medium_low", "body": "add_temple_block_medium_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add temple block medium low articulation." },
+	"Add Timbale High": { "prefix": "add_timbale_high", "body": "add_timbale_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add timbale high articulation." },
+	"Add Timbale Low": { "prefix": "add_timbale_low", "body": "add_timbale_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add timbale low articulation." },
+	"Add Tom Tom High": { "prefix": "add_tom_tom_high", "body": "add_tom_tom_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tom tom high articulation." },
+	"Add Tom Tom Low": { "prefix": "add_tom_tom_low", "body": "add_tom_tom_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tom tom low articulation." },
+	"Add Tom Tom Medium": { "prefix": "add_tom_tom_medium", "body": "add_tom_tom_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tom tom medium articulation." },
+	"Add Tom Tom Medium High": { "prefix": "add_tom_tom_medium_high", "body": "add_tom_tom_medium_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tom tom medium high articulation." },
+	"Add Tom Tom Medium Low": { "prefix": "add_tom_tom_medium_low", "body": "add_tom_tom_medium_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tom tom medium low articulation." },
+	"Add Tom Tom Very High": { "prefix": "add_tom_tom_very_high", "body": "add_tom_tom_very_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tom tom very high articulation." },
+	"Add Tom Tom Very Low": { "prefix": "add_tom_tom_very_low", "body": "add_tom_tom_very_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add tom tom very low articulation." },
+	"Add Triangle Muted": { "prefix": "add_triangle_muted", "body": "add_triangle_muted(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add triangle muted articulation." },
+	"Add Triangle Open": { "prefix": "add_triangle_open", "body": "add_triangle_open(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add triangle open articulation." },
+	"Add Vibraslap": { "prefix": "add_vibraslap", "body": "add_vibraslap(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add vibraslap articulation." },
+	"Add Whip": { "prefix": "add_whip", "body": "add_whip(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add whip articulation." },
+	"Add Whistle": { "prefix": "add_whistle", "body": "add_whistle(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add whistle articulation." },
+	"Add Wind Gong": { "prefix": "add_wind_gong", "body": "add_wind_gong(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add wind gong articulation." },
+	"Add Woodblock High": { "prefix": "add_woodblock_high", "body": "add_woodblock_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add woodblock high articulation." },
+	"Add Woodblock Low": { "prefix": "add_woodblock_low", "body": "add_woodblock_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add woodblock low articulation." },
+	"Add Woodblock Medium": { "prefix": "add_woodblock_medium", "body": "add_woodblock_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add woodblock medium articulation." },
+	"Add Woodblock Medium High": { "prefix": "add_woodblock_medium_high", "body": "add_woodblock_medium_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add woodblock medium high articulation." },
+	"Add Woodblock Medium Low": { "prefix": "add_woodblock_medium_low", "body": "add_woodblock_medium_low(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add woodblock medium low articulation." }
+}

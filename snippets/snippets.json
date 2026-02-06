@@ -127,88 +127,88 @@
 	"Set Next Articulation Force Notes": {
 		"prefix": "set_next_articulation_force_notes",
 		"body": "set_next_articulation_force_notes(${1:NOTE1}${2:, ${3:NOTE2}}${4:, ${5:NOTE3}}${6:, ...})",
-		"description": "Force notes for the next articulation."
+		"description": "Force notes (MIDI pitches) to be preloaded by the upcoming Articulation. Often redundant, but can be used to exclude unwanted samples."
 	},
 	"Set Next Articulation Force Velocities": {
 		"prefix": "set_next_articulation_force_velocities",
 		"body": "set_next_articulation_force_velocities(${1:VELOCITY1}${2:, ${3:VELOCITY2}}${4:, ...})",
-		"description": "Force velocities for the next articulation."
+		"description": "Force velocity levels (or CC levels) to be preloaded by the upcoming Articulation. Often redundant, but can be used for specific dynamic levels."
 	},
 	"Set Next Articulation Transpose": {
 		"prefix": "set_next_articulation_transpose",
 		"body": "set_next_articulation_transpose(${1:NUM_SEMITONES})",
-		"description": "Transpose the next articulation."
+		"description": "Transpose the upcoming Articulation. Critical for VST3's playing in the wrong octave before preloading."
 	},
 	"Set Next Articulation Offset Velocity Layers dB": {
 		"prefix": "set_next_articulation_offset_velocity_layers_db",
 		"body": "set_next_articulation_offset_velocity_layers_db(${1:DB_OFFSET})",
-		"description": "Offset velocity layers for the next articulation."
+		"description": "Offsets the dynamic layers for the next Articulation. Use to adjust sample selection boundaries without changing volume balance."
 	},
 	"Set Next Articulation Limit MIDI Keyboard Range": {
 		"prefix": "set_next_articulation_limit_midi_keyboard_range",
 		"body": "set_next_articulation_limit_midi_keyboard_range(${1:LOW_NOTE}, ${2:HIGH_NOTE})",
-		"description": "Limit MIDI keyboard range for the next articulation."
+		"description": "Limits the keyboard range preloaded by the next Articulation. Useful for instruments with non-standard mappings (e.g., hits and rolls)."
 	},
 	"Set Next Articulation Limit MIDI Dynamics Range": {
 		"prefix": "set_next_articulation_limit_midi_dynamics_range",
 		"body": "set_next_articulation_limit_midi_dynamics_range(${1:LOW_VEL}, ${2:HIGH_VEL})",
-		"description": "Limit MIDI dynamics range for the next articulation."
+		"description": "Limits the dynamic range preloaded by the next Articulation. Useful for instruments with non-standard dynamic mappings."
 	},
 	"Set Default EQ Saturation": {
 		"prefix": "set_default_eq_saturation",
 		"body": "set_default_eq_saturation(${1:AMOUNT})",
-		"description": "Set default EQ saturation."
+		"description": "Sets the default equalizer saturation amount (0 to 100). Applies to all subsequent Instruments."
 	},
 	"Preserve Tuning": {
 		"prefix": "preserve_tuning",
 		"body": "preserve_tuning()",
-		"description": "Preserve tuning."
+		"description": "Turns off NPPE's automatic tuning correction. Applies to all subsequent Instruments."
 	},
 	"Preserve Timing": {
 		"prefix": "preserve_timing",
 		"body": "preserve_timing()",
-		"description": "Preserve timing."
+		"description": "Turns off NPPE's automatic timing correction. Applies to all subsequent Instruments."
 	},
 	"Use Double Bitrate": {
 		"prefix": "use_double_bitrate",
 		"body": "use_double_bitrate()",
-		"description": "Use double bitrate."
+		"description": "Uses twice-as-high bitrate for preloaded sounds. May resolve quality problems at the expense of RAM/CPU."
 	},
 	"Disable Round Robins": {
 		"prefix": "disable_round_robins",
 		"body": "disable_round_robins()",
-		"description": "Disable round robins."
+		"description": "Disables round-robin samples. Useful if there are quality problems with repeated notes."
 	},
 	"Disable Dynamic Crossfading": {
 		"prefix": "disable_dynamic_crossfading",
 		"body": "disable_dynamic_crossfading()",
-		"description": "Disable dynamic crossfading."
+		"description": "Disables dynamic crossfading between samples. NPPE will only respond to hairpins by changing volume."
 	},
 	"Default to Original Panning": {
 		"prefix": "default_to_original_panning",
 		"body": "default_to_original_panning()",
-		"description": "Default to original panning."
+		"description": "Sets the Instrument's default panning mode to 'Original panning from recording'. Preserves in situ panning."
 	},
 	"Trills are Triggered by Two Notes": {
 		"prefix": "trills_are_triggered_by_two_notes",
 		"body": "trills_are_triggered_by_two_notes()",
-		"description": "Trills are triggered by two notes."
+		"description": "Specifies that trills are triggered by holding an interval of two notes (e.g., Cinematic Studio Series)."
 	},
 	"Force Full Length Shorts": {
 		"prefix": "force_full_length_shorts",
 		"body": "force_full_length_shorts()",
-		"description": "Force full length shorts."
+		"description": "Forces short notes (e.g., staccato) to play their full-duration samples, including recorded ambiance."
 	},
-	"Add Col Legno": { "prefix": "add_col_legno", "body": "add_col_legno(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add col legno articulation." },
-	"Add Cuivre": { "prefix": "add_cuivre", "body": "add_cuivre(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add cuivre articulation." },
+	"Add Col Legno": { "prefix": "add_col_legno", "body": "add_col_legno(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add col legno articulation. NPPE automatically picks the best available or simulates with pizzicato." },
+	"Add Cuivre": { "prefix": "add_cuivre", "body": "add_cuivre(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Special cuivre articulation for brass. Increases the dynamic range for sustain/legato by incorporating separate cuivre samples." },
 	"Add Flutter": { "prefix": "add_flutter", "body": "add_flutter(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add flutter articulation." },
-	"Add Legato": { "prefix": "add_legato", "body": "add_legato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add legato articulation." },
+	"Add Legato": { "prefix": "add_legato", "body": "add_legato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add legato articulation for true recorded transition samples. NPPE handles crossfades between interval and long samples." },
 	"Add Long Accent": { "prefix": "add_long_accent", "body": "add_long_accent(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long accent articulation." },
 	"Add Long Flutter": { "prefix": "add_long_flutter", "body": "add_long_flutter(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long flutter articulation." },
 	"Add Long Harmonics": { "prefix": "add_long_harmonics", "body": "add_long_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long harmonics articulation." },
 	"Add Long Sul Ponticello": { "prefix": "add_long_sul_ponticello", "body": "add_long_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long sul ponticello articulation." },
 	"Add Long Sul Tasto": { "prefix": "add_long_sul_tasto", "body": "add_long_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add long sul tasto articulation." },
-	"Add Molto Vib": { "prefix": "add_molto_vib", "body": "add_molto_vib(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add molto vib articulation." },
+	"Add Molto Vib": { "prefix": "add_molto_vib", "body": "add_molto_vib(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add molto vibrato articulation. NPPE automatically picks the best or falls back on other long articulations." },
 	"Add Non Vib": { "prefix": "add_non_vib", "body": "add_non_vib(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add non vib articulation." },
 	"Add Pizzicato": { "prefix": "add_pizzicato", "body": "add_pizzicato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add pizzicato articulation." },
 	"Add Portamento": { "prefix": "add_portamento", "body": "add_portamento(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add portamento articulation." },
@@ -216,19 +216,19 @@
 	"Add Short Sul Ponticello": { "prefix": "add_short_sul_ponticello", "body": "add_short_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add short sul ponticello articulation." },
 	"Add Short Sul Tasto": { "prefix": "add_short_sul_tasto", "body": "add_short_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add short sul tasto articulation." },
 	"Add Snap Pizzicato": { "prefix": "add_snap_pizzicato", "body": "add_snap_pizzicato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add snap pizzicato articulation." },
-	"Add Staccatissimo": { "prefix": "add_staccatissimo", "body": "add_staccatissimo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add staccatissimo articulation." },
-	"Add Staccato": { "prefix": "add_staccato", "body": "add_staccato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add staccato articulation." },
-	"Add Sustain": { "prefix": "add_sustain", "body": "add_sustain(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add sustain articulation." },
+	"Add Staccatissimo": { "prefix": "add_staccatissimo", "body": "add_staccatissimo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add staccatissimo articulation for very short notes." },
+	"Add Staccato": { "prefix": "add_staccato", "body": "add_staccato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add staccato articulation for short notes. NPPE automatically uses short samples for short notes." },
+	"Add Sustain": { "prefix": "add_sustain", "body": "add_sustain(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Required sustain articulation. Default for fading sounds (e.g., piano) and slurred passages." },
 	"Add Tremolo": { "prefix": "add_tremolo", "body": "add_tremolo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add tremolo articulation." },
 	"Add Tremolo Harmonics": { "prefix": "add_tremolo_harmonics", "body": "add_tremolo_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add tremolo harmonics articulation." },
 	"Add Tremolo Sul Ponticello": { "prefix": "add_tremolo_sul_ponticello", "body": "add_tremolo_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add tremolo sul ponticello articulation." },
 	"Add Tremolo Sul Tasto": { "prefix": "add_tremolo_sul_tasto", "body": "add_tremolo_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add tremolo sul tasto articulation." },
 	"Add Trill Half": { "prefix": "add_trill_half", "body": "add_trill_half(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add trill half articulation." },
 	"Add Trill Whole": { "prefix": "add_trill_whole", "body": "add_trill_whole(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add trill whole articulation." },
-	"Add Section Col Legno": { "prefix": "add_section_col_legno", "body": "add_section_col_legno(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section col legno articulation." },
+	"Add Section Col Legno": { "prefix": "add_section_col_legno", "body": "add_section_col_legno(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Section variant of col legno. NPPE selectively uses section/solo samples for orchestral balance." },
 	"Add Section Cuivre": { "prefix": "add_section_cuivre", "body": "add_section_cuivre(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section cuivre articulation." },
 	"Add Section Flutter": { "prefix": "add_section_flutter", "body": "add_section_flutter(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section flutter articulation." },
-	"Add Section Legato": { "prefix": "add_section_legato", "body": "add_section_legato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section legato articulation." },
+	"Add Section Legato": { "prefix": "add_section_legato", "body": "add_section_legato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Section variant of legato. NPPE selectively uses section/solo samples for orchestral balance." },
 	"Add Section Long Accent": { "prefix": "add_section_long_accent", "body": "add_section_long_accent(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section long accent articulation." },
 	"Add Section Long Flutter": { "prefix": "add_section_long_flutter", "body": "add_section_long_flutter(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section long flutter articulation." },
 	"Add Section Long Harmonics": { "prefix": "add_section_long_harmonics", "body": "add_section_long_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section long harmonics articulation." },
@@ -243,8 +243,8 @@
 	"Add Section Short Sul Tasto": { "prefix": "add_section_short_sul_tasto", "body": "add_section_short_sul_tasto(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section short sul tasto articulation." },
 	"Add Section Snap Pizzicato": { "prefix": "add_section_snap_pizzicato", "body": "add_section_snap_pizzicato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section snap pizzicato articulation." },
 	"Add Section Staccatissimo": { "prefix": "add_section_staccatissimo", "body": "add_section_staccatissimo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section staccatissimo articulation." },
-	"Add Section Staccato": { "prefix": "add_section_staccato", "body": "add_section_staccato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section staccato articulation." },
-	"Add Section Sustain": { "prefix": "add_section_sustain", "body": "add_section_sustain(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section sustain articulation." },
+	"Add Section Staccato": { "prefix": "add_section_staccato", "body": "add_section_staccato(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Section variant of staccato. NPPE selectively uses section/solo samples for orchestral balance." },
+	"Add Section Sustain": { "prefix": "add_section_sustain", "body": "add_section_sustain(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Section variant of sustain. NPPE selectively uses section/solo samples for orchestral balance." },
 	"Add Section Tremolo": { "prefix": "add_section_tremolo", "body": "add_section_tremolo(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section tremolo articulation." },
 	"Add Section Tremolo Harmonics": { "prefix": "add_section_tremolo_harmonics", "body": "add_section_tremolo_harmonics(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section tremolo harmonics articulation." },
 	"Add Section Tremolo Sul Ponticello": { "prefix": "add_section_tremolo_sul_ponticello", "body": "add_section_tremolo_sul_ponticello(${1:MIDI_QUEUE}, ${2:DYN}${3:, ${4:VEL}})", "description": "Add section tremolo sul ponticello articulation." },
@@ -255,7 +255,9 @@
 	"Add Agogo Medium": { "prefix": "add_agogo_medium", "body": "add_agogo_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add agogo medium articulation." },
 	"Add Anvil": { "prefix": "add_anvil", "body": "add_anvil(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add anvil articulation." },
 	"Add Bar Chimes": { "prefix": "add_bar_chimes", "body": "add_bar_chimes(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bar chimes articulation." },
-	"Add Bass Drum": { "prefix": "add_bass_drum", "body": "add_bass_drum(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bass drum articulation." },
+	"Add Bass Drum": { "prefix": "add_bass_drum", "body": "add_bass_drum(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bass drum hit. Take an extra command which is the MIDI key mapped to the associated sound in the VST3." },
+	"Add Bass Drum Roll": { "prefix": "add_bass_drum_roll", "body": "add_bass_drum_roll(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bass drum tremolo/roll. Requires a MIDI key mapped to the sound in the VST3." },
+	"Add Bass Drum Short": { "prefix": "add_bass_drum_short", "body": "add_bass_drum_short(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bass drum staccato/damped/muted. Requires a MIDI key mapped to the sound in the VST3." },
 	"Add Bell Tree": { "prefix": "add_bell_tree", "body": "add_bell_tree(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add bell tree articulation." },
 	"Add Cabasa": { "prefix": "add_cabasa", "body": "add_cabasa(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add cabasa articulation." },
 	"Add Castanets": { "prefix": "add_castanets", "body": "add_castanets(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add castanets articulation." },
@@ -319,7 +321,9 @@
 	"Add Ride High": { "prefix": "add_ride_high", "body": "add_ride_high(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add ride high articulation." },
 	"Add Ride Medium": { "prefix": "add_ride_medium", "body": "add_ride_medium(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add ride medium articulation." },
 	"Add Sleigh Bells": { "prefix": "add_sleigh_bells", "body": "add_sleigh_bells(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add sleigh bells articulation." },
-	"Add Snare": { "prefix": "add_snare", "body": "add_snare(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare articulation." },
+	"Add Snare": { "prefix": "add_snare", "body": "add_snare(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare hit articulation. Requires a MIDI key mapped to the sound in the VST3. Use Engine Tools to ensure correct mapping." },
+	"Add Snare Roll": { "prefix": "add_snare_roll", "body": "add_snare_roll(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare tremolo/roll articulation. Requires a MIDI key mapped to the sound in the VST3." },
+	"Add Snare Short": { "prefix": "add_snare_short", "body": "add_snare_short(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare staccato/damped/muted articulation. Requires a MIDI key mapped to the sound in the VST3." },
 	"Add Snare Cross Stick": { "prefix": "add_snare_cross_stick", "body": "add_snare_cross_stick(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare cross stick articulation." },
 	"Add Snare Rim Shot": { "prefix": "add_snare_rim_shot", "body": "add_snare_rim_shot(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare rim shot articulation." },
 	"Add Snare Side Stick": { "prefix": "add_snare_side_stick", "body": "add_snare_side_stick(${1:KEY}, ${2:MIDI_QUEUE}, ${3:DYN}${4:, ${5:VEL}})", "description": "Add snare side stick articulation." },

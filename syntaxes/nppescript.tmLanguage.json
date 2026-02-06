@@ -1,0 +1,174 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "NPPE Playback Engine Script",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#values"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.percentage.nppe",
+					"match": "^\\s*[%#].*$"
+				}
+			]
+		},
+		"commands": {
+			"patterns": [
+				{
+					"comment": "Block starters / Structural commands (bold)",
+					"name": "keyword.control.directive.bold.nppe",
+					"match": "\\b(begin_playback_engine|begin_product|begin_instrument)\\b"
+				},
+				{
+					"comment": "Block starters / Structural commands",
+					"name": "keyword.control.directive.nppe",
+					"match": "\\b(begin_percussion_instrument)\\b"
+				},
+				{
+					"comment": "Key configuration commands (bold)",
+					"name": "support.function.config.bold.nppe",
+					"match": "\\b(set_vst3_preset|set_layered_vst3_presets|set_noteperformer_override_sound)\\b"
+				},
+				{
+					"comment": "Configuration / Setters",
+					"name": "support.function.config.nppe",
+					"match": "\\b(set_vst3_name|set_vst3_id|set_microphone_configuration|set_default_microphone_balance|set_recording_location|set_developer|set_release_year|set_website|set_cover_art|add_recommended_software_version|set_long_product_name|set_eq_low_shelf|set_eq_peak1|set_eq_peak2|set_eq_high_shelf|set_eq_high_pass|set_eq_saturation|set_eq_output_gain|set_default_eq_saturation|set_next_articulation_force_notes|set_next_articulation_force_velocities|set_next_articulation_transpose|set_next_articulation_offset_velocity_layers_db|set_next_articulation_limit_midi_keyboard_range|set_next_articulation_limit_midi_dynamics_range)\\b"
+				},
+				{
+					"comment": "Articulations (Pitched & Percussion)",
+					"name": "entity.name.function.articulation.nppe",
+					"match": "\\badd_[a-zA-Z0-9_]+\\b"
+				},
+				{
+					"comment": "Boolean Flags / Special Commands",
+					"name": "constant.language.flag.nppe",
+					"match": "\\b(preserve_tuning|preserve_timing|use_double_bitrate|disable_round_robins|disable_dynamic_crossfading|default_to_original_panning|trills_are_triggered_by_two_notes|force_full_length_shorts)\\b"
+				}
+			]
+		},
+		"values": {
+			"patterns": [
+				{
+					"comment": "Function arguments in parentheses (single line, outermost paren)",
+					"match": "(?<=(begin_playback_engine|begin_product|begin_instrument|begin_percussion_instrument|set_recording_location|set_developer|set_vst3_name|set_long_product_name|set_noteperformer_override_sound|set_vst3_preset|set_layered_vst3_presets))(\\()(.*)(?=\\)$)(\\))",
+					"captures": {
+						"2": { "name": "punctuation.section.parens.begin.nppe" },
+						"3": { "name": "string.unquoted.argument.nppe" },
+						"4": { "name": "punctuation.section.parens.end.nppe" }
+					}
+				},
+				{
+					"comment": "add_* function arguments with MIDI keywords",
+					"begin": "(?<=add_[a-zA-Z0-9_]+)\\(",
+					"end": "\\)$",
+					"beginCaptures": {
+						"0": { "name": "punctuation.section.parens.begin.nppe" }
+					},
+					"endCaptures": {
+						"0": { "name": "punctuation.section.parens.end.nppe" }
+					},
+					"patterns": [
+						{
+							"comment": "MIDI CC parameters",
+							"name": "variable.parameter.cc.nppe",
+							"match": "\\bCC\\d*\\b"
+						},
+						{
+							"comment": "MIDI VEL parameter",
+							"name": "variable.parameter.velocity.nppe",
+							"match": "\\bVEL\\b"
+						},
+						{
+							"comment": "MIDI NOTEON/CHANNEL keywords",
+							"name": "variable.parameter.midi.nppe",
+							"match": "\\b(NOTEON|CHANNEL)\\b"
+						},
+						{
+							"comment": "Operators",
+							"name": "keyword.operator.nppe",
+							"match": "[=$;]"
+						},
+						{
+							"comment": "Numeric values",
+							"name": "constant.numeric.nppe",
+							"match": "\\b\\d+(\\.\\d+)?\\b"
+						},
+						{
+							"comment": "Separators",
+							"name": "punctuation.separator.nppe",
+							"match": ","
+						},
+						{
+							"comment": "Text arguments",
+							"name": "string.unquoted.argument.nppe",
+							"match": "[a-zA-Z_][a-zA-Z0-9_\\-\\s]*"
+						}
+					]
+				},
+				{
+					"comment": "MIDI CC parameters",
+					"name": "variable.parameter.cc.nppe",
+					"match": "\\bCC\\d*\\b"
+				},
+				{
+					"comment": "MIDI VEL parameter",
+					"name": "variable.parameter.velocity.nppe",
+					"match": "\\bVEL\\b"
+				},
+				{
+					"comment": "MIDI NOTEON/CHANNEL keywords",
+					"name": "variable.parameter.midi.nppe",
+					"match": "\\b(NOTEON|CHANNEL)\\b"
+				},
+				{
+					"comment": "Operators inside MIDI queue",
+					"name": "keyword.operator.nppe",
+					"match": "[=$;]"
+				},
+				{
+					"comment": "VST3 IDs (Hex strings)",
+					"name": "constant.numeric.hex.nppe",
+					"match": "\\b[0-9A-Fa-f]{32,}\\b"
+				},
+				{
+					"comment": "File extensions",
+					"name": "string.quoted.other.filename.nppe",
+					"match": "\\b[\\w\\-\\s]+\\.(png|vstpreset)\\b"
+				},
+				{
+					"comment": "URLs",
+					"name": "string.unquoted.url.nppe",
+					"match": "https?://[\\w\\./\\-]+"
+				},
+				{
+					"comment": "Numeric values",
+					"name": "constant.numeric.nppe",
+					"match": "\\b\\d+(\\.\\d+)?\\b"
+				},
+				{
+					"comment": "Parentheses",
+					"name": "punctuation.section.parens.nppe",
+					"match": "[()]"
+				},
+				{
+					"comment": "Separators",
+					"name": "punctuation.separator.nppe",
+					"match": ","
+				}
+			]
+		}
+	},
+	"scopeName": "source.nppe",
+	"fileTypes": [
+		"playback_engine.txt"
+	]
+}

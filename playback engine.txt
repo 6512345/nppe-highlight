@@ -1,0 +1,1831 @@
+# -------------------------------------------------------------------
+# 
+# Playback Engine: Synchron
+# 
+# The VST3 identifier must be a perfect match to the VST3. You can
+# fetch the ID of a VST3 plugin from "File > Engine Tools..." in NPPE
+# 
+# Cached playback engines are limited to a single microphone 
+# configuration. This configuration may have up to three stereo
+# signals, for example:
+# 
+# - microphone(Main)
+# - microphone(Main, Close)
+# - microphone(Main, Close, Ambient)
+# 
+# The microphones must be arranged in order and align with the stereo
+# outputs of the VST3 plugin. E.g. "Main" is routed to Output 1,
+# "Close" to Output 2, and "Ambient" to Output 3.
+# 
+# With multiple microphones, the first signal should be your desired
+# main signal, e.g, "Tree". The 2nd and 3rd microphones can be any
+# perspective that you desire. Still, it's best to be consistent
+# since NPPE users may copy microphone-balance settings between slots
+# If the "Close" and "Ambient" signals are reversed, this feature
+# doesn't work.
+# 
+# Although the microphone configuration is usually set once at the
+# beginning of this document, you can also change it between
+# instruments.
+# 
+# The front cover graphics must be exactly 372 x 526 pixels
+# 
+# -------------------------------------------------------------------
+
+begin_playback_engine(Synchron)
+set_recording_location(Synchron Stage Vienna)
+set_developer(Vienna Symphonic Library)
+set_release_year(2021)
+set_vst3_name(Synchron Player)
+set_vst3_id(E2666DCD0106481DAD2F37AE8191168A)
+set_website(https://www.vsl.co.at/synchron/series)
+set_cover_art(poster_synchron_orchestra.png)
+set_microphone_configuration(Main, Close, Mid)
+set_default_microphone_balance(1.0, 0.0, 0.0)
+add_recommended_software_version(Synchron Player 1.3.1865)
+set_default_eq_saturation(5.0)
+
+
+
+
+
+
+
+
+# -------------------------------------------------------------------
+# 
+# The product "VSL Synchron Woodwinds" starts here.
+# 
+# Instrument slots in NPPE will be displayed as "[SY Woodwinds] Piano"
+# 
+# -------------------------------------------------------------------
+
+begin_product(SY Woodwinds)
+set_long_product_name(VSL Synchron Woodwinds)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/Flute
+# -------------------------------------------------------------------
+
+begin_instrument(Flute)
+set_noteperformer_override_sound(Flute)
+
+# solo sounds
+set_vst3_preset(Synchron Orchestra Solo Flute 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_non_vib(NOTEON=3, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+# section sounds
+set_layered_vst3_presets(Synchron Orchestra Solo Flute 2.vstpreset, Synchron Orchestra Solo Flute 1.vstpreset)
+add_section_sustain(NOTEON=2, CC1, 1)
+add_section_non_vib(NOTEON=3, CC1, 1)
+add_section_legato(NOTEON=2, CC1, 1, 127)
+add_section_staccato(NOTEON=1, VEL, 1)
+add_section_staccatissimo(NOTEON=0, VEL, 1)
+add_section_tremolo(NOTEON=4, CC1, 1)
+add_section_trill_half(NOTEON=5, CC1, 1)
+add_section_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/Piccolo
+# -------------------------------------------------------------------
+
+begin_instrument(Piccolo)
+set_noteperformer_override_sound(Piccolo)
+set_vst3_preset(Synchron Orchestra Solo Piccolo 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_non_vib(NOTEON=3, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/Alto Flute
+# -------------------------------------------------------------------
+
+begin_instrument(Alto Flute)
+set_noteperformer_override_sound(Alto flute)
+set_vst3_preset(Synchron Orchestra Solo Alto Flute 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_non_vib(NOTEON=3, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/Oboe
+# -------------------------------------------------------------------
+
+begin_instrument(Oboe)
+set_noteperformer_override_sound(Oboe)
+
+# solo sounds
+set_vst3_preset(Synchron Orchestra Solo Oboe 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_non_vib(NOTEON=3, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+#add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+# section sounds
+set_layered_vst3_presets(Synchron Orchestra Solo Oboe 2.vstpreset, Synchron Orchestra Solo Oboe 1.vstpreset)
+add_section_sustain(NOTEON=2, CC1, 1)
+add_section_non_vib(NOTEON=3, CC1, 1)
+add_section_legato(NOTEON=2, CC1, 1, 127)
+add_section_staccato(NOTEON=1, VEL, 1)
+add_section_staccatissimo(NOTEON=0, VEL, 1)
+#add_section_tremolo(NOTEON=4, CC1, 1)
+add_section_trill_half(NOTEON=5, CC1, 1)
+add_section_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/English Horn
+# -------------------------------------------------------------------
+
+begin_instrument(English Horn)
+set_noteperformer_override_sound(English horn)
+set_vst3_preset(Synchron Orchestra Solo English Horn 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_non_vib(NOTEON=3, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+#add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/Clarinet
+# -------------------------------------------------------------------
+
+begin_instrument(Clarinet)
+set_noteperformer_override_sound(Clarinet)
+
+# solo sounds
+set_vst3_preset(Synchron Orchestra Solo Clarinet 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+# section sounds
+set_layered_vst3_presets(Synchron Orchestra Solo Clarinet 2.vstpreset, Synchron Orchestra Solo Clarinet 1.vstpreset)
+add_section_sustain(NOTEON=2, CC1, 1)
+add_section_legato(NOTEON=2, CC1, 1, 127)
+add_section_staccato(NOTEON=1, VEL, 1)
+add_section_staccatissimo(NOTEON=0, VEL, 1)
+add_section_tremolo(NOTEON=4, CC1, 1)
+add_section_trill_half(NOTEON=5, CC1, 1)
+add_section_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/Bass Clarinet
+# -------------------------------------------------------------------
+
+begin_instrument(Bass Clarinet)
+set_noteperformer_override_sound(Bass clarinet)
+set_vst3_preset(Synchron Orchestra Solo Bass Clarinet 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/Bassoon
+# -------------------------------------------------------------------
+
+begin_instrument(Bassoon)
+set_noteperformer_override_sound(Bassoon)
+
+# solo sounds
+set_vst3_preset(Synchron Orchestra Solo Bassoon 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_non_vib(NOTEON=3, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+# section sounds
+set_layered_vst3_presets(Synchron Orchestra Solo Bassoon 2.vstpreset, Synchron Orchestra Solo Bassoon 1.vstpreset)
+add_section_sustain(NOTEON=2, CC1, 1)
+add_section_non_vib(NOTEON=3, CC1, 1)
+add_section_legato(NOTEON=2, CC1, 1, 127)
+add_section_staccato(NOTEON=1, VEL, 1)
+add_section_staccatissimo(NOTEON=0, VEL, 1)
+add_section_tremolo(NOTEON=4, CC1, 1)
+add_section_trill_half(NOTEON=5, CC1, 1)
+add_section_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Woodwinds/Contrabassoon
+# -------------------------------------------------------------------
+
+begin_instrument(Contrabassoon)
+set_noteperformer_override_sound(Contrabassoon)
+set_vst3_preset(Synchron Orchestra Solo Contrabassoon 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+
+
+
+
+# -------------------------------------------------------------------
+# 
+# The product "VSL Synchron Brass" starts here.
+# 
+# Instrument slots in NPPE will be displayed as "[SY Brass] Piano"
+# 
+# -------------------------------------------------------------------
+
+begin_product(SY Brass)
+set_long_product_name(VSL Synchron Brass)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Brass/Horn
+# -------------------------------------------------------------------
+
+begin_instrument(Horn)
+set_noteperformer_override_sound(French horn)
+
+# solo sounds
+set_vst3_preset(Synchron Orchestra Solo Horn 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+# section sounds
+set_vst3_preset(Synchron Orchestra Section Horns.vstpreset)
+add_section_sustain(NOTEON=2, CC1, 1)
+add_section_legato(NOTEON=2, CC1, 1, 127)
+add_section_staccato(NOTEON=1, VEL, 1)
+add_section_tremolo(NOTEON=4, CC1, 1)
+add_section_trill_half(NOTEON=5, CC1, 1)
+add_section_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Brass/Trumpet
+# -------------------------------------------------------------------
+
+begin_instrument(Trumpet)
+set_noteperformer_override_sound(Trumpet)
+
+# solo sounds
+set_vst3_preset(Synchron Orchestra Solo Trumpet 1.vstpreset)
+add_sustain(NOTEON=3, CC1, 1)
+add_non_vib(NOTEON=3, CC1, 1)
+add_legato(NOTEON=3, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+# section sounds
+set_layered_vst3_presets(Synchron Orchestra Section Trumpets.vstpreset, Synchron Orchestra Section Trumpets Overlay.vstpreset)
+add_section_sustain(NOTEON=3, CC1, 1)
+add_section_non_vib(NOTEON=3, CC1, 1)
+add_section_legato(NOTEON=3, CC1, 1, 127)
+add_section_staccato(NOTEON=1, VEL, 1)
+add_section_tremolo(NOTEON=4, CC1, 1)
+add_section_trill_half(NOTEON=5, CC1, 1)
+add_section_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Brass/Trombone
+# -------------------------------------------------------------------
+
+begin_instrument(Trombone)
+set_noteperformer_override_sound(Trombone)
+
+# solo sounds
+set_vst3_preset(Synchron Orchestra Solo Trombone 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+
+# section sounds
+set_vst3_preset(Synchron Orchestra Section Trombones.vstpreset)
+add_section_sustain(NOTEON=2, CC1, 1)
+add_section_legato(NOTEON=2, CC1, 1, 127)
+add_section_staccato(NOTEON=1, VEL, 1)
+add_section_tremolo(NOTEON=4, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Brass/Bass Trombone
+# -------------------------------------------------------------------
+
+begin_instrument(Bass Trombone)
+set_noteperformer_override_sound(Bass trombone)
+set_vst3_preset(Synchron Orchestra Solo Bass Trombone 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_tremolo(NOTEON=4, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Brass/Cimbasso
+# -------------------------------------------------------------------
+
+begin_instrument(Cimbasso)
+set_noteperformer_override_sound(Cimbasso)
+set_vst3_preset(Synchron Orchestra Solo Cimbasso 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Brass/Tuba
+# -------------------------------------------------------------------
+
+begin_instrument(Tuba)
+set_noteperformer_override_sound(Tuba)
+set_vst3_preset(Synchron Orchestra Solo Tuba 1.vstpreset)
+add_sustain(NOTEON=2, CC1, 1)
+add_legato(NOTEON=2, CC1, 127)
+add_staccato(NOTEON=1, VEL, 1)
+add_trill_half(NOTEON=5, CC1, 1)
+add_trill_whole(NOTEON=6, CC1, 1)
+
+
+
+
+
+
+
+
+# -------------------------------------------------------------------
+# 
+# The product "VSL Synchron Percussion I" starts here.
+# 
+# Instrument slots in NPPE will be displayed as "[SY Percussion I] Piano"
+# 
+# -------------------------------------------------------------------
+
+begin_product(SY Percussion I)
+set_long_product_name(VSL Synchron Percussion I)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Timpani
+# -------------------------------------------------------------------
+
+begin_instrument(Timpani)
+set_noteperformer_override_sound(Timpani)
+set_vst3_preset(Synchron Orchestra Timpani.vstpreset)
+
+set_next_articulation_offset_velocity_layers_db(-5.0)
+set_next_articulation_limit_midi_keyboard_range(0, 59)
+add_sustain(NOTEON=0, VEL, 1)
+
+set_next_articulation_offset_velocity_layers_db(-5.0)
+set_next_articulation_limit_midi_keyboard_range(0, 60)
+add_tremolo(NOTEON=1, CC1, 1)
+
+set_next_articulation_offset_velocity_layers_db(-5.0)
+set_next_articulation_limit_midi_keyboard_range(0, 59)
+add_staccato(NOTEON=2, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tubular Bells (Medium Beater)
+# -------------------------------------------------------------------
+
+begin_instrument(Tubular Bells (Medium Beater))
+set_noteperformer_override_sound(Chimes (mallets))
+set_vst3_preset(Synchron Orchestra Tubular Bells.vstpreset)
+
+add_sustain(NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tubular Bells (Hard Beater)
+# -------------------------------------------------------------------
+
+begin_instrument(Tubular Bells (Hard Beater))
+set_noteperformer_override_sound(Chimes (mallets))
+set_vst3_preset(Synchron Orchestra Tubular Bells (Hard Beater).vstpreset)
+add_sustain(NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tubular Bells (Triangle Beater)
+# -------------------------------------------------------------------
+
+begin_instrument(Tubular Bells (Triangle Beater))
+set_noteperformer_override_sound(Chimes (mallets))
+set_vst3_preset(Synchron Orchestra Tubular Bells (Triangle Beater).vstpreset)
+add_sustain(NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Glockenspiel (Metal Beater)
+# -------------------------------------------------------------------
+
+begin_instrument(Glockenspiel (Metal Beater))
+set_noteperformer_override_sound(Glockenspiel (mallets))
+set_vst3_preset(Synchron Orchestra Glockenspiel.vstpreset)
+
+set_next_articulation_transpose(12)
+add_sustain(NOTEON=0, VEL, 1)
+
+set_next_articulation_transpose(12)
+add_tremolo(NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Glockenspiel (Plastic Beater)
+# -------------------------------------------------------------------
+
+begin_instrument(Glockenspiel (Plastic Beater))
+set_noteperformer_override_sound(Glockenspiel (mallets))
+set_vst3_preset(Synchron Orchestra Glockenspiel (Plastic Beater).vstpreset)
+
+set_next_articulation_transpose(12)
+add_sustain(NOTEON=0, VEL, 1)
+
+set_next_articulation_transpose(12)
+add_tremolo(NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Xylophone (Wood Beater)
+# -------------------------------------------------------------------
+
+begin_instrument(Xylophone (Wood Beater))
+set_noteperformer_override_sound(Xylophone (mallets))
+set_vst3_preset(Synchron Orchestra Xylophone.vstpreset)
+
+add_sustain(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Xylophone (Leather Beater)
+# -------------------------------------------------------------------
+
+begin_instrument(Xylophone (Leather Beater))
+set_noteperformer_override_sound(Xylophone (mallets))
+set_vst3_preset(Synchron Orchestra Xylophone (Leather Beater).vstpreset)
+add_sustain(NOTEON=0, VEL, 1)
+add_tremolo(NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Xylophone (Bowed)
+# -------------------------------------------------------------------
+
+begin_instrument(Xylophone (Bowed))
+set_noteperformer_override_sound(Xylophone (bowed))
+set_vst3_preset(Synchron Orchestra Xylophone (Bowed).vstpreset)
+add_sustain(NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Bass Drum (Medium Beater)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Bass Drum (Medium Beater))
+set_vst3_preset(Synchron Orchestra Bass Drum.vstpreset)
+add_bass_drum(62, NOTEON=0, VEL, 1)
+add_bass_drum_roll(85, NOTEON=1, CC1, 1)
+add_bass_drum_short(65, NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Bass Drum (Hard Beater)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Bass Drum (Hard Beater))
+set_vst3_preset(Synchron Orchestra Bass Drum (Hard Beater).vstpreset)
+add_bass_drum(62, NOTEON=0, VEL, 1)
+add_bass_drum_roll(85, NOTEON=1, CC1, 1)
+add_bass_drum_short(65, NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Bass Drum (Soft Beater)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Bass Drum (Soft Beater))
+set_vst3_preset(Synchron Orchestra Bass Drum (Soft Beater).vstpreset)
+add_bass_drum(62, NOTEON=0, VEL, 1)
+add_bass_drum_roll(85, NOTEON=1, CC1, 1)
+add_bass_drum_short(65, NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Bass Drum (Hard Brush)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Bass Drum (Hard Brush))
+set_vst3_preset(Synchron Orchestra Bass Drum (Hard Brush).vstpreset)
+add_bass_drum(62, NOTEON=0, VEL, 1)
+add_bass_drum_roll(72, NOTEON=1, CC1, 1)
+add_bass_drum_short(65, NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Bass Drum (Soft Brush)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Bass Drum (Soft Brush))
+set_vst3_preset(Synchron Orchestra Bass Drum (Soft Brush).vstpreset)
+add_bass_drum(62, NOTEON=0, VEL, 1)
+add_bass_drum_roll(72, NOTEON=1, CC1, 1)
+add_bass_drum_short(65, NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Castanets (Large)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Castanets (Large))
+set_vst3_preset(Synchron Orchestra Castanets.vstpreset)
+add_castanets(60, NOTEON=0, VEL, 1)
+add_castanets_roll(64, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Castanets (Small)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Castanets (Small))
+set_vst3_preset(Synchron Orchestra Castanets.vstpreset)
+add_castanets(60, NOTEON=2, VEL, 1)
+add_castanets_roll(64, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Concert Toms (Sticks)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Concert Toms (Sticks))
+set_vst3_preset(Synchron Orchestra Concert Toms.vstpreset)
+add_tom_tom_very_low(36, NOTEON=0, VEL, 1)
+add_tom_tom_low(48, NOTEON=0, VEL, 1)
+add_tom_tom_medium_low(72, NOTEON=0, VEL, 1)
+add_tom_tom_medium(60, NOTEON=2, VEL, 1)
+add_tom_tom_medium_high(72, NOTEON=2, VEL, 1)
+add_tom_tom_high(84, NOTEON=2, VEL, 1)
+add_tom_tom_very_high(96, NOTEON=2, VEL, 1)
+add_tom_tom_very_low_roll(41, NOTEON=1, CC1, 1)
+add_tom_tom_low_roll(53, NOTEON=1, CC1, 1)
+add_tom_tom_medium_low_roll(77, NOTEON=1, CC1, 1)
+add_tom_tom_medium_roll(65, NOTEON=3, CC1, 1)
+add_tom_tom_medium_high_roll(77, NOTEON=3, CC1, 1)
+add_tom_tom_high_roll(89, NOTEON=3, CC1, 1)
+add_tom_tom_very_high_roll(101, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Concert Toms (Rods)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Concert Toms (Rods))
+set_vst3_preset(Synchron Orchestra Concert Toms (Rods).vstpreset)
+add_tom_tom_very_low(36, NOTEON=0, VEL, 1)
+add_tom_tom_low(48, NOTEON=0, VEL, 1)
+add_tom_tom_medium_low(72, NOTEON=0, VEL, 1)
+add_tom_tom_medium(60, NOTEON=2, VEL, 1)
+add_tom_tom_medium_high(72, NOTEON=2, VEL, 1)
+add_tom_tom_high(84, NOTEON=2, VEL, 1)
+add_tom_tom_very_high(96, NOTEON=2, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Concert Toms (Brushes)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Concert Toms (Brushes))
+set_vst3_preset(Synchron Orchestra Concert Toms (Brushes).vstpreset)
+add_tom_tom_very_low(36, NOTEON=0, VEL, 1)
+add_tom_tom_low(48, NOTEON=0, VEL, 1)
+add_tom_tom_medium_low(72, NOTEON=0, VEL, 1)
+add_tom_tom_medium(60, NOTEON=2, VEL, 1)
+add_tom_tom_medium_high(72, NOTEON=2, VEL, 1)
+add_tom_tom_high(84, NOTEON=2, VEL, 1)
+add_tom_tom_very_high(96, NOTEON=2, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Concert Toms (Mallets)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Concert Toms (Mallets))
+set_vst3_preset(Synchron Orchestra Concert Toms (Mallets).vstpreset)
+add_tom_tom_very_low(36, NOTEON=0, VEL, 1)
+add_tom_tom_low(48, NOTEON=0, VEL, 1)
+add_tom_tom_medium_low(72, NOTEON=0, VEL, 1)
+add_tom_tom_medium(60, NOTEON=2, VEL, 1)
+add_tom_tom_medium_high(72, NOTEON=2, VEL, 1)
+add_tom_tom_high(84, NOTEON=2, VEL, 1)
+add_tom_tom_very_high(96, NOTEON=2, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Piatti (Zildjian)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Piatti (Zildjian))
+set_vst3_preset(Synchron Orchestra Piatti.vstpreset)
+add_clash_medium(65, NOTEON=0, VEL, 1)
+add_clash_high(65, NOTEON=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Piatti (Meinl)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Piatti (Meinl))
+set_vst3_preset(Synchron Orchestra Piatti.vstpreset)
+add_clash_medium(65, NOTEON=1, VEL, 1)
+add_clash_high(65, NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Shaker (Tube)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Shaker (Tube))
+set_vst3_preset(Synchron Orchestra Shakers.vstpreset)
+add_egg_shaker(48, NOTEON=0, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Shaker (Egg)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Shaker (Egg))
+set_vst3_preset(Synchron Orchestra Shakers.vstpreset)
+add_egg_shaker(48, NOTEON=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Snare Drum (Sticks)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Snare Drum (Sticks))
+set_vst3_preset(Synchron Orchestra Snare Drum.vstpreset)
+add_snare(60, NOTEON=0, VEL, 1)
+add_snare_roll(84, NOTEON=2, CC1, 1)
+add_snare_rim_shot(66, NOTEON=0, VEL, 1)
+add_snare_side_stick(61, NOTEON=0, VEL, 1)
+add_snares_off(60, NOTEON=1, VEL, 1)
+add_snares_off_roll(84, NOTEON=3, CC1, 1)
+add_snares_off_rim_shot(66, NOTEON=1, VEL, 1)
+add_snares_off_side_stick(61, NOTEON=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Snare Drum (Rods)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Snare Drum (Rods))
+set_vst3_preset(Synchron Orchestra Snare Drum (Rods).vstpreset)
+add_snare(60, NOTEON=0, VEL, 1)
+add_snare_side_stick(61, NOTEON=0, VEL, 1)
+add_snares_off(60, NOTEON=1, VEL, 1)
+add_snares_off_side_stick(61, NOTEON=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Snare Drum (Mallets)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Snare Drum (Mallets))
+set_vst3_preset(Synchron Orchestra Snare Drum (Mallets).vstpreset)
+add_snare(60, NOTEON=0, VEL, 1)
+add_snare_side_stick(61, NOTEON=0, VEL, 1)
+add_snares_off(60, NOTEON=1, VEL, 1)
+add_snares_off_side_stick(61, NOTEON=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Snare Drum (Brushes)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Snare Drum (Brushes))
+set_vst3_preset(Synchron Orchestra Snare Drum (Brushes).vstpreset)
+add_snare(60, NOTEON=0, VEL, 1)
+add_snare_roll(84, NOTEON=2, CC1, 1)
+add_snare_side_stick(61, NOTEON=0, VEL, 1)
+add_snares_off(60, NOTEON=1, VEL, 1)
+add_snares_off_roll(84, NOTEON=3, CC1, 1)
+add_snares_off_side_stick(61, NOTEON=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K16 (Sticks)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K16 (Sticks))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K16.vstpreset)
+add_suspended_cymbal(60, NOTEON=0, VEL, 1)
+add_suspended_cymbal_roll(83, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K16 (Hard Mallets)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K16 (Hard Mallets))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K16.vstpreset)
+add_suspended_cymbal(60, NOTEON=2, VEL, 1)
+add_suspended_cymbal_roll(84, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K16 (Soft Mallets)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K16 (Soft Mallets))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K16.vstpreset)
+add_suspended_cymbal(60, NOTEON=4, VEL, 1)
+add_suspended_cymbal_roll(84, NOTEON=5, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K16 (Rods)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K16 (Rods))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K16.vstpreset)
+add_suspended_cymbal(60, NOTEON=6, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K16 (Brushes)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K16 (Brushes))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K16.vstpreset)
+add_suspended_cymbal(60, NOTEON=8, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K18 (Sticks)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K18 (Sticks))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K18.vstpreset)
+add_suspended_cymbal(60, NOTEON=0, VEL, 1)
+add_suspended_cymbal_roll(83, NOTEON=1, CC1, 1)
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K18 (Hard Mallets)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K18 (Hard Mallets))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K18.vstpreset)
+add_suspended_cymbal(60, NOTEON=2, VEL, 1)
+add_suspended_cymbal_roll(84, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K18 (Soft Mallets)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K18 (Soft Mallets))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K18.vstpreset)
+add_suspended_cymbal(60, NOTEON=4, VEL, 1)
+add_suspended_cymbal_roll(84, NOTEON=5, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K18 (Rods)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K18 (Rods))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K18.vstpreset)
+add_suspended_cymbal(60, NOTEON=6, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Suspended Cymbal K18 (Brushes)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Suspended Cymbal K18 (Brushes))
+set_vst3_preset(Synchron Orchestra Suspended Cymbal K18.vstpreset)
+add_suspended_cymbal(60, NOTEON=8, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Taiko (Hard Mallet)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Taiko (Hard Mallet))
+set_vst3_preset(Synchron Orchestra Taikos.vstpreset)
+add_taiko_medium(60, CHANNEL=1, VEL, 1)
+add_taiko_low(60, CHANNEL=1, VEL, 1)
+add_taiko_very_low(60, CHANNEL=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Taiko (Soft Mallet)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Taiko (Soft Mallet))
+set_vst3_preset(Synchron Orchestra Taikos.vstpreset)
+add_taiko_medium(72, CHANNEL=1, VEL, 1)
+add_taiko_low(72, CHANNEL=1, VEL, 1)
+add_taiko_very_low(72, CHANNEL=1, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tam-tam (100 cm, Hard Beater)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Tam-tam (100 cm, Hard Beater))
+set_vst3_preset(Synchron Orchestra Tam-tam 100 cm.vstpreset)
+add_gong(65, NOTEON=0, VEL, 1)
+add_gong_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tam-tam (100 cm, Soft Beater)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Tam-tam (100 cm, Soft Beater))
+set_vst3_preset(Synchron Orchestra Tam-tam 100 cm.vstpreset)
+add_gong(65, NOTEON=2, VEL, 1)
+add_gong_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tam-tam (120 cm, Hard Beater)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Tam-tam (120 cm, Hard Beater))
+set_vst3_preset(Synchron Orchestra Tam-tam 120 cm.vstpreset)
+add_gong(65, NOTEON=0, VEL, 1)
+add_gong_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tam-tam (120 cm, Soft Beater)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Tam-tam (120 cm, Soft Beater))
+set_vst3_preset(Synchron Orchestra Tam-tam 120 cm.vstpreset)
+add_gong(65, NOTEON=2, VEL, 1)
+add_gong_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tambourine (Lefima)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Tambourine (Lefima))
+set_vst3_preset(Synchron Orchestra Tambourine.vstpreset)
+add_tambourine(60, NOTEON=0, VEL, 1)
+add_tambourine_roll(84, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Tambourine (Kolberg)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Tambourine (Kolberg))
+set_vst3_preset(Synchron Orchestra Tambourine (Kolberg).vstpreset)
+add_tambourine(60, NOTEON=0, VEL, 1)
+add_tambourine_roll(84, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Steel 14 cm, Heavy)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Steel 14 cm, Heavy))
+set_vst3_preset(Synchron Orchestra Triangle (Steel 14).vstpreset)
+add_triangle_open(65, NOTEON=0, VEL, 1)
+add_triangle_open_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Steel 14 cm, Light)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Steel 14 cm, Light))
+set_vst3_preset(Synchron Orchestra Triangle (Steel 14).vstpreset)
+add_triangle_open(65, NOTEON=2, VEL, 1)
+add_triangle_open_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Steel 21 cm, Heavy)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Steel 21 cm, Heavy))
+set_vst3_preset(Synchron Orchestra Triangle (Steel 21).vstpreset)
+add_triangle_open(65, NOTEON=0, VEL, 1)
+add_triangle_open_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Steel 21 cm, Light)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Steel 21 cm, Light))
+set_vst3_preset(Synchron Orchestra Triangle (Steel 21).vstpreset)
+add_triangle_open(65, NOTEON=2, VEL, 1)
+add_triangle_open_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Steel 30 cm, Heavy)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Steel 30 cm, Heavy))
+set_vst3_preset(Synchron Orchestra Triangle (Steel 30).vstpreset)
+add_triangle_open(65, NOTEON=0, VEL, 1)
+add_triangle_open_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Steel 30 cm, Light)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Steel 30 cm, Light))
+set_vst3_preset(Synchron Orchestra Triangle (Steel 30).vstpreset)
+add_triangle_open(65, NOTEON=2, VEL, 1)
+add_triangle_open_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Bronze 30 cm, Heavy)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Bronze 30 cm, Heavy))
+set_vst3_preset(Synchron Orchestra Triangle (Bronze 30).vstpreset)
+add_triangle_open(65, NOTEON=0, VEL, 1)
+add_triangle_open_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Bronze 30 cm, Light)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Bronze 30 cm, Light))
+set_vst3_preset(Synchron Orchestra Triangle (Bronze 30).vstpreset)
+add_triangle_open(65, NOTEON=2, VEL, 1)
+add_triangle_open_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Baroque 17 cm, Heavy)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Baroque 17 cm, Heavy))
+set_vst3_preset(Synchron Orchestra Triangle (Baroque 17).vstpreset)
+add_triangle_open(65, NOTEON=0, VEL, 1)
+add_triangle_open_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Baroque 17 cm, Light)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Baroque 17 cm, Light))
+set_vst3_preset(Synchron Orchestra Triangle (Baroque 17).vstpreset)
+add_triangle_open(65, NOTEON=2, VEL, 1)
+add_triangle_open_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Baroque 21 cm, Heavy)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Baroque 21 cm, Heavy))
+set_vst3_preset(Synchron Orchestra Triangle (Baroque 21).vstpreset)
+add_triangle_open(65, NOTEON=0, VEL, 1)
+add_triangle_open_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Baroque 21 cm, Light)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Baroque 21 cm, Light))
+set_vst3_preset(Synchron Orchestra Triangle (Baroque 21).vstpreset)
+add_triangle_open(65, NOTEON=2, VEL, 1)
+add_triangle_open_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Serrated 21 cm, Heavy)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Serrated 21 cm, Heavy))
+set_vst3_preset(Synchron Orchestra Triangle (Serrated 21).vstpreset)
+add_triangle_open(65, NOTEON=0, VEL, 1)
+add_triangle_open_roll(85, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Triangle (Serrated 21 cm, Light)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Triangle (Serrated 21 cm, Light))
+set_vst3_preset(Synchron Orchestra Triangle (Serrated 21).vstpreset)
+add_triangle_open(65, NOTEON=2, VEL, 1)
+add_triangle_open_roll(85, NOTEON=3, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Woodblocks (Yarn Mallets)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Woodblocks (Yarn Mallets))
+set_vst3_preset(Synchron Orchestra Woodblocks (Yarn).vstpreset)
+add_woodblock_low(36, NOTEON=0, VEL, 1)
+add_woodblock_medium_low(48, NOTEON=0, VEL, 1)
+add_woodblock_medium(60, NOTEON=0, VEL, 1)
+add_woodblock_medium_high(72, NOTEON=0, VEL, 1)
+add_woodblock_high(84, NOTEON=0, VEL, 1)
+add_woodblock_low_roll(40, NOTEON=1, CC1, 1)
+add_woodblock_medium_low_roll(52, NOTEON=1, CC1, 1)
+add_woodblock_medium_roll(64, NOTEON=1, CC1, 1)
+add_woodblock_medium_high_roll(76, NOTEON=1, CC1, 1)
+add_woodblock_high_roll(88, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Woodblocks (Plastic Mallets)
+# -------------------------------------------------------------------
+
+begin_percussion_instrument(Woodblocks (Plastic Mallets))
+set_vst3_preset(Synchron Orchestra Woodblocks (Plastic).vstpreset)
+add_woodblock_low(36, NOTEON=0, VEL, 1)
+add_woodblock_medium_low(48, NOTEON=0, VEL, 1)
+add_woodblock_medium(60, NOTEON=0, VEL, 1)
+add_woodblock_medium_high(72, NOTEON=0, VEL, 1)
+add_woodblock_high(84, NOTEON=0, VEL, 1)
+add_woodblock_low_roll(40, NOTEON=1, CC1, 1)
+add_woodblock_medium_low_roll(52, NOTEON=1, CC1, 1)
+add_woodblock_medium_roll(64, NOTEON=1, CC1, 1)
+add_woodblock_medium_high_roll(76, NOTEON=1, CC1, 1)
+add_woodblock_high_roll(88, NOTEON=1, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Percussion I/Celesta
+# -------------------------------------------------------------------
+
+begin_instrument(Celesta)
+set_noteperformer_override_sound(Celesta)
+set_vst3_preset(Synchron Orchestra Celesta.vstpreset)
+
+set_next_articulation_transpose(12)
+add_sustain(NOTEON=0, VEL, 1)
+
+
+
+
+
+
+
+
+# -------------------------------------------------------------------
+# 
+# The product "VSL Synchron Strings Pro" starts here.
+# 
+# Instrument slots in NPPE will be displayed as "[SY Strings Pro] Piano"
+# 
+# -------------------------------------------------------------------
+
+begin_product(SY Strings Pro)
+set_long_product_name(VSL Synchron Strings Pro)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Strings Pro/Violins 1
+# -------------------------------------------------------------------
+
+begin_instrument(Violins 1)
+set_noteperformer_override_sound(Violins)
+set_vst3_preset(Synchron Orchestra Violins 1.vstpreset)
+
+add_sustain(NOTEON=6, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0;CC1=127, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_sul_ponticello(NOTEON=13, CC1, 1)
+add_short_sul_ponticello(NOTEON=14, VEL, 1)
+add_tremolo_sul_ponticello(NOTEON=15, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Strings Pro/Violins 2
+# -------------------------------------------------------------------
+
+begin_instrument(Violins 2)
+set_noteperformer_override_sound(Violins)
+set_vst3_preset(Synchron Orchestra Violins 2.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0;CC1=127, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_sul_ponticello(NOTEON=13, CC1, 1)
+add_short_sul_ponticello(NOTEON=14, VEL, 1)
+add_tremolo_sul_ponticello(NOTEON=15, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Strings Pro/Violas
+# -------------------------------------------------------------------
+
+begin_instrument(Violas)
+set_noteperformer_override_sound(Violas)
+set_vst3_preset(Synchron Orchestra Violas.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0;CC1=127, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_sul_ponticello(NOTEON=13, CC1, 1)
+add_short_sul_ponticello(NOTEON=14, VEL, 1)
+add_tremolo_sul_ponticello(NOTEON=15, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Strings Pro/Violoncellos
+# -------------------------------------------------------------------
+
+begin_instrument(Violoncellos)
+set_noteperformer_override_sound(Violoncellos)
+set_vst3_preset(Synchron Orchestra Violoncellos.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0;CC1=127, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_sul_ponticello(NOTEON=13, CC1, 1)
+add_short_sul_ponticello(NOTEON=14, VEL, 1)
+add_tremolo_sul_ponticello(NOTEON=15, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Strings Pro/Contrabasses
+# -------------------------------------------------------------------
+
+begin_instrument(Contrabasses)
+set_noteperformer_override_sound(Contrabasses)
+set_vst3_preset(Synchron Orchestra Contrabasses.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=1, VEL, 1)
+add_staccatissimo(NOTEON=0;CC1=127, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_sul_ponticello(NOTEON=13, CC1, 1)
+add_short_sul_ponticello(NOTEON=14, VEL, 1)
+add_tremolo_sul_ponticello(NOTEON=15, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+
+
+
+
+
+
+
+
+
+# -------------------------------------------------------------------
+# 
+# The product "VSL Elite Strings" starts here.
+# 
+# Instrument slots in NPPE will be displayed as "[Elite Strings] Piano"
+# 
+# -------------------------------------------------------------------
+
+begin_product(Elite Strings)
+set_long_product_name(VSL Elite Strings)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Elite Strings/Violins 1
+# -------------------------------------------------------------------
+
+begin_instrument(Violins 1)
+set_noteperformer_override_sound(Violins)
+set_vst3_preset(SY Elite Violins 1.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Elite Strings/Violins 2
+# -------------------------------------------------------------------
+
+begin_instrument(Violins 2)
+set_noteperformer_override_sound(Violins)
+set_vst3_preset(SY Elite Violins 2.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Elite Strings/Violas
+# -------------------------------------------------------------------
+
+begin_instrument(Violas)
+set_noteperformer_override_sound(Violas)
+set_vst3_preset(SY Elite Violas.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Elite Strings/Violoncellos
+# -------------------------------------------------------------------
+
+begin_instrument(Violoncellos)
+set_noteperformer_override_sound(Violoncellos)
+set_vst3_preset(SY Elite Violoncellos.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Elite Strings/Contrabasses
+# -------------------------------------------------------------------
+
+begin_instrument(Contrabasses)
+set_noteperformer_override_sound(Contrabasses)
+set_vst3_preset(SY Elite Contrabasses.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+
+# -------------------------------------------------------------------
+# 
+# The product "VSL Duality Strings" starts here.
+# 
+# Instrument slots in NPPE will be displayed as "[Duality Strings] Piano"
+# 
+# -------------------------------------------------------------------
+
+begin_product(Duality Strings)
+set_long_product_name(VSL Duality Strings)
+
+% Duality har different microphone labels and default balance
+set_microphone_configuration(A-Main, B-Dark, A-Room)
+set_default_microphone_balance(1.0, 1.0, 0.0)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Duality Strings/Violins 1
+# -------------------------------------------------------------------
+
+begin_instrument(Violins 1)
+set_noteperformer_override_sound(Violins)
+set_vst3_preset(SY Duality Violins 1.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Duality Strings/Violins 2
+# -------------------------------------------------------------------
+
+begin_instrument(Violins 2)
+set_noteperformer_override_sound(Violins)
+set_vst3_preset(SY Duality Violins 2.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Duality Strings/Violas
+# -------------------------------------------------------------------
+
+begin_instrument(Violas)
+set_noteperformer_override_sound(Violas)
+set_vst3_preset(SY Duality Violas.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Duality Strings/Violoncellos
+# -------------------------------------------------------------------
+
+begin_instrument(Violoncellos)
+set_noteperformer_override_sound(Violoncellos)
+set_vst3_preset(SY Duality Violoncellos.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: Duality Strings/Contrabasses
+# -------------------------------------------------------------------
+
+begin_instrument(Contrabasses)
+set_noteperformer_override_sound(Contrabasses)
+set_vst3_preset(SY Duality Contrabasses.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=16, CC1, 1)
+add_tremolo_harmonics(NOTEON=17, CC1, 1)
+add_short_harmonics(NOTEON=18, VEL, 1)
+
+
+
+
+
+# -------------------------------------------------------------------
+# 
+# The product "VSL Synchron Solo Strings" starts here.
+# 
+# Instrument slots in NPPE will be displayed as "[SY Solo Strings] Piano"
+# 
+# -------------------------------------------------------------------
+
+begin_product(SY Solo Strings)
+set_long_product_name(VSL Synchron Solo Strings)
+set_microphone_configuration(Main, Close, Room-Mix)
+set_default_microphone_balance(1.0, 0.0, 0.0)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Solo Strings/Solo Violin
+# -------------------------------------------------------------------
+
+begin_instrument(Solo Violin)
+set_noteperformer_override_sound(Solo violin)
+set_vst3_preset(SY Solo Violin.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=13, CC1, 1)
+add_tremolo_harmonics(NOTEON=14, CC1, 1)
+add_short_harmonics(NOTEON=15, VEL, 1)
+
+
+
+
+# -------------------------------------------------------------------
+# Instrument: SY Solo Strings/Solo Cello
+# -------------------------------------------------------------------
+
+begin_instrument(Solo Cello)
+set_noteperformer_override_sound(Solo cello)
+set_vst3_preset(SY Solo Cello.vstpreset)
+add_sustain(NOTEON=6, CC1, 1)
+add_legato(NOTEON=6, CC1, 127)
+add_portamento(NOTEON=7, CC1, 127)
+add_molto_vib(NOTEON=8, CC1, 1)
+add_non_vib(NOTEON=9, CC1, 1)
+add_staccato(NOTEON=0, VEL, 1)
+add_staccatissimo(NOTEON=2, VEL, 1)
+add_pizzicato(NOTEON=3, VEL, 1)
+add_snap_pizzicato(NOTEON=4, VEL, 1)
+add_col_legno(NOTEON=5, VEL, 1)
+add_tremolo(NOTEON=10, CC1, 1)
+add_trill_half(NOTEON=11, CC1, 1)
+add_trill_whole(NOTEON=12, CC1, 1)
+add_long_harmonics(NOTEON=13, CC1, 1)
+add_tremolo_harmonics(NOTEON=14, CC1, 1)
+add_short_harmonics(NOTEON=15, VEL, 1)
+
+
+
+
+
+

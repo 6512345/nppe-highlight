@@ -59,7 +59,7 @@
 			"patterns": [
 				{
 					"comment": "Function arguments in parentheses (single line, outermost paren)",
-					"match": "(?<=(begin_playback_engine|begin_product|begin_instrument|begin_percussion_instrument|set_recording_location|set_developer|set_vst3_name|set_long_product_name|set_noteperformer_override_sound|set_vst3_preset|set_layered_vst3_presets))(\\()(.*)(?=\\)$)(\\))",
+					"match": "(?<=(begin_playback_engine|begin_product|begin_instrument|begin_percussion_instrument|set_recording_location|set_developer|set_vst3_name|set_long_product_name|set_noteperformer_override_sound|set_vst3_preset|set_layered_vst3_presets|add_recommended_software_version))(\\()(.*)(?=\\)$)(\\))",
 					"captures": {
 						"2": { "name": "punctuation.section.parens.begin.nppe" },
 						"3": { "name": "string.unquoted.argument.nppe" },

@@ -2,7 +2,7 @@
   "name": "nppe-script-highlighting",
   "displayName": "NPPE Script",
   "description": "Provide Syntax highlights for NPPE Playback Engine Script file",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "publisher": "65",
   "repository": {
     "type": "git",

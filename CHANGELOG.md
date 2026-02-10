@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.2
+
+- Code Cleanup
+
+## 2.0.1
+
+- Fix highlighting error on add_recommended_software_version()
+
 ## 2.0.0
 
 - Add documentations
